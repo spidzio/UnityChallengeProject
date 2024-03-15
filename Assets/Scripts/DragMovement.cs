@@ -9,6 +9,9 @@ public class DragMovement : MonoBehaviour
     Ray ray;
 	RaycastHit hit;
     Rigidbody rb;
+    float xLimit = 4.5f;
+    float zLimit = 4.5f;
+
 
     void Start()
     {
@@ -27,8 +30,12 @@ public class DragMovement : MonoBehaviour
 
     void OnMouseUp()
     {
-        isDragging = false;
-        rb.useGravity = true;
+        if (transform.position.x < xLimit && transform.position.x > -xLimit && transform.position.z < zLimit && transform.position.z > -zLimit)
+        {
+            isDragging = false;
+            rb.useGravity = true;
+        }
+        
     }
 
 
