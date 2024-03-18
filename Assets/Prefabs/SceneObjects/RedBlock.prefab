@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1510907561807795043}
   m_Layer: 0
   m_Name: RedBlock
-  m_TagString: Untagged
+  m_TagString: food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,6 +133,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a558a4a02fa3c4edfb9ff9d6b4fdd908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodPlaced:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6352418194172634182, guid: 440c4d58fe77a40fab36c97a3b402dc1,
+          type: 3}
+        m_TargetAssemblyTypeName: EaterController, Assembly-CSharp
+        m_MethodName: ActivatePredatorMode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1510907561807795043
 CanvasRenderer:
   m_ObjectHideFlags: 0

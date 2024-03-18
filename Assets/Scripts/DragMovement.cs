@@ -1,22 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DragMovement : MonoBehaviour
 {
     float hoverHeight = 0.7f;
-    bool isDragging = true;
+    public bool isDragging = true;
     Ray ray;
 	RaycastHit hit;
     Rigidbody rb;
     float xLimit = 4.5f;
     float zLimit = 4.5f;
 
+    public UnityEvent foodPlaced;
+    
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.useGravity = false;
+        if (rb != null)
+        {
+            rb.useGravity = false;
+        } 
     }
 	
 	void Update()
@@ -33,11 +40,14 @@ public class DragMovement : MonoBehaviour
         if (transform.position.x < xLimit && transform.position.x > -xLimit && transform.position.z < zLimit && transform.position.z > -zLimit)
         {
             isDragging = false;
-            rb.useGravity = true;
+            if (rb != null)
+            {
+                rb.useGravity = true;
+            }
+            foodPlaced.Invoke();
         }
         
     }
-
 
     void Drag()
     {
@@ -46,5 +56,10 @@ public class DragMovement : MonoBehaviour
 		{
             transform.position = new Vector3(hit.point.x, hoverHeight, hit.point.z);
 		}
+    }
+
+    public bool isPlaced()
+    {
+        return !isDragging;
     }
 }
