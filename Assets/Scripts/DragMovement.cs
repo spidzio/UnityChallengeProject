@@ -12,10 +12,6 @@ public class DragMovement : MonoBehaviour
     float xLimit = 4.5f;
     float zLimit = 4.5f;
 
-    public UnityEvent foodPlaced;
-    
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
