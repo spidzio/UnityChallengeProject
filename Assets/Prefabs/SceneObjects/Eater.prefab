@@ -37,7 +37,7 @@ Transform:
   - {fileID: 555614957099005007}
   - {fileID: 5962512006682704648}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4172364819323460837
 MeshFilter:
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a558a4a02fa3c4edfb9ff9d6b4fdd908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDragging: 1
 --- !u!114 &6352418194172634182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8c331a3ed7f41a79a71d664ae8a0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 2
+  rotationSpeed: 2
+  foodList: []
 --- !u!1 &4253022836185433506
 GameObject:
   m_ObjectHideFlags: 0

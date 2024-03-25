@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 5840093754125050396}
   m_Layer: 5
   m_Name: GreenItem
-  m_TagString: Untagged
+  m_TagString: MenuItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,3 +280,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8892876755330201637, guid: c6af4dc4747c54841818e7c3eca3c014, type: 3}
+  hoverHeight: 0.7

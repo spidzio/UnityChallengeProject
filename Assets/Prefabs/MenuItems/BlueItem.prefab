@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 5840093754125050396}
   m_Layer: 5
   m_Name: BlueItem
-  m_TagString: Untagged
+  m_TagString: MenuItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,3 +280,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1657795007417598586, guid: 1bce28e26d53f4b9c9d5198b07f49ba8, type: 3}
+  hoverHeight: 0.7

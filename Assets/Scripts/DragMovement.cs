@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class DragMovement : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class DragMovement : MonoBehaviour
 	{
         if (isDragging)
         {
+            if (Input.GetKeyUp(KeyCode.Escape))
+            {
+                Destroy(gameObject);
+                RestoreMenuPosition();
+            }
             Drag();
         }
 		
@@ -34,6 +40,8 @@ public class DragMovement : MonoBehaviour
     {
         if (transform.position.x < xLimit && transform.position.x > -xLimit && transform.position.z < zLimit && transform.position.z > -zLimit)
         {
+            RestoreMenuPosition();
+
             isDragging = false;
             if (rb != null)
             {
@@ -55,5 +63,11 @@ public class DragMovement : MonoBehaviour
     public bool isPlaced()
     {
         return !isDragging;
+    }
+
+    private void RestoreMenuPosition()
+    {
+        GameObject scrollView = GameObject.Find("Panel");
+        scrollView.transform.DOMoveX(184, 1.0f).SetEase(Ease.InOutBack);
     }
 }
